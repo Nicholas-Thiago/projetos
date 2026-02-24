@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <img src="calculadora-icone.png" alt="Icone de uma calculadora">
+        <h1>Calculadora</h1>
+        <nav>
+            <a href="#">Adição</a>
+            <a href="#">Subtração</a>
+            <a href="#">Multiplicação</a>
+            <a href="#">Divisão</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="calculadora">
+            <h2>Calculadora de Adição</h2>
+            <span>Insira os valores nas caixas:</span>
+            <input type="number" name="numeros" id="adicao1"> +
+            <input type="number" name="numeros" id="adicao2"> =
+            <span id="resad"></span>
+            <button onclick="adicao(adicao1, adicao2)">Calcular</button>
+        </div>
+
+        <div class="calculadora">
+            <h2>Calculadora de Subtração</h2>
+            <span>Insira os valores nas caixas:</span>
+            <input type="number" name="numeros" id="sub1"> -
+            <input type="number" name="numeros" id="sub2"> =
+            <span id="ressub"></span>
+            <button onclick="subtracao(sub1, sub2)">Calcular</button>
+        </div>
+
+        <div class="calculadora">
+            <h2>Calculadora de Multiplicação</h2>
+            <span>Insira os valores nas caixas:</span>
+            <input type="number" name="numeros" id="mult1"> x
+            <input type="number" name="numeros" id="mult2"> =
+            <span id="resmult"></span>
+            <button onclick="multiplicacao(mult1, mult2)">Calcular</button>
+        </div>
+
+        <div class="calculadora">
+            <h2>Calculadora de Divisão</h2>
+            <span>Insira os valores nas caixas:</span>
+            <input type="number" name="numeros" id="div1"> &divide;
+            <input type="number" name="numeros" id="div2"> =
+            <span id="resdiv"></span>
+            <button onclick="divisao(div1, div2)">Calcular</button>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; Nicholas Thiago</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

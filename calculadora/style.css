@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body{
+    margin: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: rgb(130, 215, 248);
+    color: rgb(217, 252, 253);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(103, 193, 235), rgb(130, 215, 248) );
+}
+
+nav{
+    margin-left: auto;
+}
+
+a{
+    padding: 5px;
+    margin-right: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(217, 252, 253);;
+}
+
+a:hover{
+    background-color: rgb(103, 193, 235);
+    border-radius: 10px;
+}
+
+img{
+    height: 80px;
+    width: 80px;
+    margin: 8px;
+}
+
+footer{
+    text-align: center;
+}
+
+main{
+    margin: 15px auto;
+    background-color: rgb(103, 193, 235);
+    width: 670px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.calculadora{
+    padding: 18px;
+}
+
+button{
+    width: 70px;
+    height: 25px;
+    border: 1px solid rgba(0, 69, 109, 0.425);
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 162, 255, 0.575);
+    color: rgb(217, 252, 253);
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background: rgb(0, 162, 255);
+    border: 1px solid rgba(0, 69, 109, 0.911);
+}
+
+input{
+    border-radius: 10px;
+    height: 17px;
+    background-color: rgb(217, 252, 253);
+}
+
+#resad, #ressub, #resmult, #resdiv{
+    font-size: 21px;
+}
