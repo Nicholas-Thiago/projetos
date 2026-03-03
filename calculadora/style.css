@@ -25,11 +25,11 @@ a{
 }
 
 nav a{
+    color: rgb(217, 252, 253);
     text-decoration: none;
-    color: rgb(217, 252, 253);;
 }
 
-a:hover{
+a:hover, a:focus{
     background-color: rgb(103, 193, 235);
     border-radius: 10px;
 }
@@ -81,4 +81,8 @@ input{
 
 #resad, #ressub, #resmult, #resdiv{
     font-size: 21px;
+}
+
+.escondido{
+    display: none;
 }
