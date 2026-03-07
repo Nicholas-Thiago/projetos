@@ -1,3 +1,5 @@
+let numeros = []
+
 const adicao = (n1t, n2t) => {
     let resad = document.getElementById('resad')
     let n1 = Number(n1t.value)
@@ -23,4 +25,11 @@ const divisao = (n1t, n2t) => {
     let n1 = Number(n1t.value)
     let n2 = Number(n2t.value)
     resdiv.innerHTML = `<strong>${n1 / n2}</strong>`
+}
+
+const visor = (valort) => {
+    let visortxt = document.querySelector('.visor')
+    visortxt.innerHTML = 'oi'
+    let valor = Number(valort.value)
+    numeros.append(valor)
 }
