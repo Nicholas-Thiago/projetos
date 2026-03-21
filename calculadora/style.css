@@ -80,33 +80,36 @@ input{
     background-color: rgb(217, 252, 253);
 }
 
-#resad, #ressub, #resmult, #resdiv{
-    font-size: 21px;
-}
-
 .container{
     display: flex;
     flex-direction: column;
     padding: 10px;
     width: auto;
     height: auto;
-    gap: 5px;
+    gap: 3px;
 }
 
 .visor{
     display: flex;
     width: auto;
-    height: 20px;
+    height: 35px;
     background-color: rgb(112, 210, 255);
     border-radius: 15px;
     align-items: center;
     padding: 5px 10px;
 }
 
+#historico{
+    font-size: 0.66rem;
+    opacity: 0.8;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
 .botoes{
     display: flex;
+    justify-content: center;
     align-items: start;
-    padding-top: 30px;
     gap: 3px;
 }
 
@@ -121,4 +124,12 @@ input{
     flex-direction: column;
     gap: 3px;
     padding: 0px 3px;
+}
+
+.especiais{
+    display: flex;
+    margin-top: 20px;
+    gap: 3px;
+    padding: 0px 5px 0px 0px;
+    justify-content: center
 }
