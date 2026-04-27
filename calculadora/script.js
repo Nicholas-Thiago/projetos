@@ -1,40 +1,168 @@
-let sub = document.querySelector('.sub').classList.add('escondido')
-let mult = document.querySelector('.mult').classList.add('escondido')
-let divi = document.querySelector('.divi').classList.add('escondido')
+let resultadovalor = 0
+let operacao = null
+let apagar = false
+let funcao_executada = false
+let visortxt = document.getElementById('atual')
+let contaatual = document.getElementById('historico')
 
-const adicao = (n1t, n2t) => {
-    let resad = document.getElementById('resad')
-    let n1 = Number(n1t.value)
-    let n2 = Number(n2t.value)
-    resad.innerHTML = `<strong>${n1 + n2}</strong>`
+const visor = (event) => {
+    if (apagar){
+        visortxt.textContent = ''
+        apagar = false
+    }
+    if (visortxt.textContent.length < 16){
+        visortxt.textContent += event.target.textContent
+        funcao_executada = true
+    }
 }
 
-const subtracao = (n1t, n2t) => {
-    let ressub = document.getElementById('ressub')
-    let n1 = Number(n1t.value)
-    let n2 = Number(n2t.value)
-    ressub.innerHTML = `<strong>${n1 - n2}</strong>`
+let numerosclasse = document.querySelectorAll('.numero')
+numerosclasse.forEach((numeroclicado) => {
+    numeroclicado.addEventListener('click', visor)
+})
+
+const calculo = () => {
+    let numero = Number(visortxt.textContent)
+    
+    if (operacao === '+'){
+        resultadovalor += numero
+    } else if (operacao === '-'){
+        resultadovalor -= numero
+    } else if(operacao === 'x'){
+        resultadovalor *= numero
+    } else if (operacao === '/'){
+        resultadovalor /= numero
+    } else{
+        resultadovalor = numero
+    }
+
+    visortxt.textContent = resultadovalor
+    contaatual.textContent = resultadovalor
 }
 
-const multiplicacao = (n1t, n2t) => {
-    let resmult = document.getElementById('resmult')
-    let n1 = Number(n1t.value)
-    let n2 = Number(n2t.value)
-    resmult.innerHTML = `<strong>${n1 * n2}</strong>`
-}
-const divisao = (n1t, n2t) => {
-    let resdiv = document.getElementById('resdiv')
-    let n1 = Number(n1t.value)
-    let n2 = Number(n2t.value)
-    resdiv.innerHTML = `<strong>${n1 / n2}</strong>`
+const somar = () => {
+    if (visortxt.textContent != resultadovalor || funcao_executada == true){
+        calculo()
+        contaatual.textContent += ' +'
+        operacao = '+'
+        apagar = true
+    } else{
+        contaatual.textContent = `${visortxt.textContent} +`
+        operacao = '+'
+    }
+    funcao_executada = false
 }
 
-const alternar = (classe) => {
-    adi = document.querySelector('.adi').classList.add('escondido')
-    sub = document.querySelector('.sub').classList.add('escondido')
-    mult = document.querySelector('.mult').classList.add('escondido')
-    divi = document.querySelector('.divi').classList.add('escondido')
+let soma = document.getElementById('soma')
+soma.addEventListener('click', somar)
 
-    let escolhido = document.querySelector('.' + classe)
-    escolhido.classList.remove('escondido')
+const subtrair = () => {
+    if (visortxt.textContent != resultadovalor || funcao_executada == true){
+        calculo()
+        contaatual.textContent += ' -'
+        operacao = '-'
+        apagar = true
+    } else{
+        contaatual.textContent = `${visortxt.textContent} -`
+        operacao = '-'
+    }
+    funcao_executada = false
 }
+
+let subtrai = document.getElementById('subtracao')
+subtrai.addEventListener('click', subtrair)
+
+const multiplicar = () => {
+    if (visortxt.textContent != resultadovalor || funcao_executada == true){
+        calculo()
+        contaatual.textContent += ' x'
+        operacao = 'x'
+        apagar = true
+    } else{
+        contaatual.textContent = `${visortxt.textContent} x`
+        operacao = 'x'
+    }
+    funcao_executada = false
+}
+
+let multiplica = document.getElementById('multiplicacao')
+multiplica.addEventListener('click', multiplicar)
+
+const divisao = () => {
+    if (visortxt.textContent != resultadovalor || funcao_executada == true){
+        calculo()
+        contaatual.innerHTML += ' &divide;'
+        operacao = '/'
+        apagar = true
+    } else{
+        contaatual.innerHTML = `${visortxt.textContent} &divide;`
+        operacao = '/'
+    }
+    funcao_executada = false
+}
+
+let dividir = document.getElementById('divisao')
+dividir.addEventListener('click', divisao)
+
+const resultado = () => {
+    let valor1 = resultadovalor
+    let valor2 = visortxt.textContent
+    if (operacao !== null){
+        calculo()
+        if (operacao == '/'){
+            contaatual.innerHTML = `${valor1} &divide; ${valor2} =`
+        } else{
+            contaatual.textContent = `${valor1} ${operacao} ${valor2} =`
+        }
+        operacao = null
+        apagar = true
+    } else{
+        contaatual.textContent = `${valor2} =`
+    }
+}
+
+let igual = document.getElementById('resultado')
+igual.addEventListener('click', resultado)
+
+const clear = () => {
+    resultadovalor = 0
+    visortxt.textContent = resultadovalor
+    contaatual.textContent = ''
+    apagar = true
+    operacao = null
+}
+
+let c = document.getElementById('Clear')
+c.addEventListener('click', clear)
+
+const backspace = () => {
+    if (visortxt.textContent.length > 1){
+        visortxt.textContent = visortxt.textContent.slice(0, -1)
+    } else{
+        visortxt.textContent = '0'
+        apagar = true
+    }
+    
+}
+
+let backspaceapagar = document.getElementById('backspace')
+backspaceapagar.addEventListener('click', backspace)
+
+const clearentry = () => {
+    visortxt.textContent = 0
+    apagar = true
+}
+
+let ce = document.getElementById('Clearentry')
+ce.addEventListener('click', clearentry)
+
+const porcento = () => {
+    if (operacao === '+' || operacao === '-'){
+        visortxt.textContent = resultadovalor * visortxt.textContent/100
+    } else{
+        visortxt.textContent = visortxt.textContent/100
+    }
+}
+
+let porcentagem_botao = document.getElementById('porcentagem')
+porcentagem_botao.addEventListener('click', porcento)

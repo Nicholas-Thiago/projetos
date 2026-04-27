@@ -7,6 +7,7 @@ html, body{
     font-size: 16px;
     background-color: rgb(130, 215, 248);
     color: rgb(217, 252, 253);
+    min-height: 100vh;
 }
 
 header{
@@ -15,41 +16,60 @@ header{
     background: linear-gradient(to bottom, rgb(103, 193, 235), rgb(130, 215, 248) );
 }
 
-nav{
-    margin-left: auto;
-}
-
-a{
-    padding: 5px;
-    margin-right: 5px;
-}
-
-nav a{
-    color: rgb(217, 252, 253);
-    text-decoration: none;
-}
-
-a:hover, a:focus{
-    background-color: rgb(103, 193, 235);
+footer img:hover{
+    height: 33px;
+    width: 35px;
+    background-color: rgb(81, 164, 202);
     border-radius: 10px;
 }
 
-img{
-    height: 80px;
-    width: 80px;
-    margin: 8px;
+header img{
+    height: 110px;
+    width: 110px;
+    margin: 15px;
 }
 
 footer{
+    background-color: rgb(103, 193, 235);
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h2{
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    font-size: 16pt;
+}
+
+footer img{
+    height: 30px;
+    width: 30px;
+    text-decoration: none;
+}
+
+.contatos{
+    width: 300px;
     text-align: center;
+    margin: auto 5px auto auto;
+}
+
+.contatos a{
+   margin: 0;
+   padding: 8px; 
 }
 
 main{
     margin: 15px auto;
     background-color: rgb(103, 193, 235);
-    width: 670px;
+    width: fit-content;
     border-radius: 20px;
     padding: 10px;
+    height: fit-content;
 }
 
 .calculadora{
@@ -57,7 +77,7 @@ main{
 }
 
 button{
-    width: 70px;
+    width: 55px;
     height: 25px;
     border: 1px solid rgba(0, 69, 109, 0.425);
     margin-top: 5px;
@@ -79,10 +99,56 @@ input{
     background-color: rgb(217, 252, 253);
 }
 
-#resad, #ressub, #resmult, #resdiv{
-    font-size: 21px;
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    gap: 3px;
 }
 
-.escondido{
-    display: none;
+.visor{
+    display: flex;
+    width: auto;
+    height: 35px;
+    background-color: rgb(112, 210, 255);
+    border-radius: 15px;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#historico{
+    font-size: 0.66rem;
+    opacity: 0.8;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 3px;
+}
+
+.numeros{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.operacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0px 3px;
+}
+
+.especiais{
+    display: flex;
+    margin-top: 20px;
+    gap: 3px;
+    padding: 0px 5px 0px 0px;
+    justify-content: center
 }

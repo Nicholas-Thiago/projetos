@@ -9,58 +9,62 @@
 <body>
     
     <header>
-        <img src="calculadora-icone.png" alt="Icone de uma calculadora">
+        <img src="logo3.png" alt="Icone de uma calculadora">
         <h1>Calculadora</h1>
-        <nav>
-            <a href="#" onclick="alternar('adi')">Adição</a>
-            <a href="#" onclick="alternar('sub')">Subtração</a>
-            <a href="#" onclick="alternar('mult')">Multiplicação</a>
-            <a href="#" onclick="alternar('divi')">Divisão</a>
-        </nav>
     </header>
     
     <main>
-        <div class="calculadora">
-            <div class="adi">
-                <h2>Calculadora de Adição</h2>
-                <span>Insira os valores nas caixas:</span>
-                <input type="number" name="numeros" id="adicao1"> +
-                <input type="number" name="numeros" id="adicao2"> =
-                <span id="resad"></span>
-                <button onclick="adicao(adicao1, adicao2)">Calcular</button>
+        <div class="container">
+            <div class="visor">
+                <span id="atual"></span>
+                <span id="historico"></span>
             </div>
             
-            <div class="sub">
-                <h2>Calculadora de Subtração</h2>
-                <span>Insira os valores nas caixas:</span>
-                <input type="number" name="numeros" id="sub1"> -
-                <input type="number" name="numeros" id="sub2"> =
-                <span id="ressub"></span>
-                <button onclick="subtracao(sub1, sub2)">Calcular</button>
+            <div class="especiais">
+                <button id="porcentagem">%</button>
+                <button id="Clearentry">CE</button>
+                <button id="Clear">C</button>
+                <button id="backspace">&leftarrow;</button>
             </div>
-            
-            <div class="mult">
-                <h2>Calculadora de Multiplicação</h2>
-                <span>Insira os valores nas caixas:</span>
-                <input type="number" name="numeros" id="mult1"> x
-                <input type="number" name="numeros" id="mult2"> =
-                <span id="resmult"></span>
-                <button onclick="multiplicacao(mult1, mult2)">Calcular</button>
-            </div>
-            
-            <div class="divi">
-                <h2>Calculadora de Divisão</h2>
-                <span>Insira os valores nas caixas:</span>
-                <input type="number" name="numeros" id="div1"> &divide;
-                <input type="number" name="numeros" id="div2"> =
-                <span id="resdiv"></span>
-                <button onclick="divisao(div1, div2)">Calcular</button>
+
+            <div class="botoes">
+                
+                <div class="numeros">
+                    <button class="numero">9</button>
+                    <button class="numero">10</button>
+                    <button class="numero">11</button>
+                    <button class="numero">6</button>
+                    <button class="numero">7</button>
+                    <button class="numero">8</button>
+                    <button class="numero">3</button>
+                    <button class="numero">4</button>
+                    <button class="numero">5</button>
+                    <button class="numero">0</button>
+                    <button class="numero">1</button>
+                    <button class="numero">2</button>
+                </div>
+                
+                <div class="operacoes">
+                    
+                    <button id="divisao">&divide;</button>
+                    <button id="multiplicacao">x</button>
+                    <button id="subtracao">-</button>
+                    <button id="soma">+</button>
+                    <button id="resultado">=</button>
+                </div>
+                
             </div>
         </div>
     </main>
     
     <footer>
-        <p>&copy; Nicholas Thiago</p>
+        <h2>@Nicholas Thiago</h2>
+        <div class="contatos">
+            <h3>Contatos</h3>
+            <a href="mailto:nicholasthiagosilva@gmail.com" target="_blank" rel="external"><img src="gmail.svg" alt="Icone de email"></a>
+            <a href="https://wa.me/5583987796381?text=Olá." target="_blank" rel="external"><img src="whatsapp.svg" alt="Icone do Whatsapp"></a>
+            <a href="https://github.com/Nicholas-Thiago" target="_blank" rel="external"><img src="github.svg" alt="Icone do Github"></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
