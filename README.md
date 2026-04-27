@@ -2,7 +2,7 @@
 
 # Calculadora Web
 
-Esse site funciona como uma calculadora simples, similar a do Windows ou do Google, porém com algumas funções a menos.
+Esse site funciona como uma calculadora simples, similar a do Windows ou do Google, porém com algumas funções a menos e um pequeno detalhe a mais, ao invés dos números irem de 0 até 9 essa calculadora vai de 0 até 11!
 
 Eu construi esse projeto ao longo de alguns meses com o propósito de aprender e pôr em prática as habilidades e conhecimentos que eu aprendi durante o curso do ensino superior que estou fazendo e o que eu aprendi por mim mesmo praticando, sendo o meu primeiro "grande" projeto.
 
