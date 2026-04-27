@@ -7,6 +7,7 @@ html, body{
     font-size: 16px;
     background-color: rgb(130, 215, 248);
     color: rgb(217, 252, 253);
+    min-height: 100vh;
 }
 
 header{
@@ -15,33 +16,51 @@ header{
     background: linear-gradient(to bottom, rgb(103, 193, 235), rgb(130, 215, 248) );
 }
 
-nav{
-    margin-left: auto;
-}
-
-a{
-    padding: 5px;
-    margin-right: 5px;
-}
-
-nav a{
-    text-decoration: none;
-    color: rgb(217, 252, 253);;
-}
-
-a:hover{
-    background-color: rgb(103, 193, 235);
+footer img:hover{
+    height: 33px;
+    width: 35px;
+    background-color: rgb(81, 164, 202);
     border-radius: 10px;
 }
 
-img{
-    height: 80px;
-    width: 80px;
-    margin: 8px;
+header img{
+    height: 110px;
+    width: 110px;
+    margin: 15px;
 }
 
 footer{
+    background-color: rgb(103, 193, 235);
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h2{
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    font-size: 16pt;
+}
+
+footer img{
+    height: 30px;
+    width: 30px;
+    text-decoration: none;
+}
+
+.contatos{
+    width: 300px;
     text-align: center;
+    margin: auto 5px auto auto;
+}
+
+.contatos a{
+   margin: 0;
+   padding: 8px; 
 }
 
 main{
